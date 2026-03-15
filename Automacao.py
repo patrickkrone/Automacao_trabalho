@@ -226,49 +226,9 @@ def analise():
     time.sleep(0.2)
     if checar_parada():
         return
-    repeticao(5)
-    time.sleep(0.2)
-    focar_janela("análise ")
-    time.sleep(0.2)
-    kb.press(Key.tab)  # pula do cnpj para segmento
-    time.sleep(0.1)
-    if checar_parada():
-        return
-    focar_janela("Tabela de Apoio ")
-
-    repeticao(1)
-    time.sleep(0.2)
-    kb.press(Key.down)
-    time.sleep(0.2)
-    kb.press(Key.down)
-
-    time.sleep(0.2)
-    if checar_parada():
-        return
-    focar_janela("análise ")  # indo para access
-
-    kb.press(Key.tab)  # pulando data cadasto para descricao reclamacao
-    time.sleep(0.2)
-    focar_janela("Tabela de Apoio ")  # voltando para excel
-
-    if checar_parada():
-        return
-    repeticao(1)
-    time.sleep(0.2)
-    if checar_parada():
-        return
-    focar_janela("análise ")  # voltando para acess
-
-    kb.press(Key.tab)  # sai do descricao
-    time.sleep(0.2)
-    kb.press(Key.right)  # vai para analise
-    time.sleep(0.2)
-    kb.press(Key.tab)
-    time.sleep(0.2)
-    kb.press(Key.tab)
-    time.sleep(0.2)
-    kb.press(Key.tab)
-    time.sleep(0.2)
+    repeticao(9)
+    
+  
     if checar_parada():
         return
     focar_janela("Tabela de Apoio ")  # volta para excel
@@ -281,55 +241,9 @@ def analise():
     time.sleep(0.2)
     if checar_parada():
         return
-    repeticao(1)
-    time.sleep(0.2)
-    kb.press(Key.down)  # vai para  familia no excel
-    time.sleep(0.2)
-    focar_janela("análise ")  # voltando para acess
-    if checar_parada():
-        return
-    kb.press(Key.tab)  # sai do data people
-    time.sleep(0.2)
-    focar_janela("Tabela de Apoio ")  # voltando para excel
-    # --------------------------
-    if checar_parada():
-        return
-    focar_janela("Tabela de Apoio ")  # voltando para excel
-    repeticao(2)  # FAMILIA E PRODUTO
-    time.sleep(0.2)
-    kb.press(Key.down)
-    time.sleep(0.1)
-    focar_janela("análise ")  # voltando para acess
-    kb.press(Key.tab)
-    if checar_parada():
-        return
-    time.sleep(0.2)
-    focar_janela("Tabela de Apoio ")
-    if check_var.get() is True:
-        if checar_parada():
-            return
-        repeticao(2)  # MANIFES CANAL E canal de origem e  DATA PASGM
-        time.sleep(0.2)
-        kb.press(Key.down)
-        time.sleep(0.1)
-        focar_janela("análise ")  # voltando para acess
-        kb.press(Key.tab)
-        time.sleep(0.1)
-        focar_janela("Tabela de Apoio ")
-    else:
-        if checar_parada():
-            return
-        repeticao(3)  # MANIFES CANAL E canal de origem e  DATA PASGM
-        time.sleep(0.2)
-    if checar_parada():
-        return
-    kb.press(Key.down)
-    time.sleep(0.1)
-    focar_janela("análise ")  # voltando para acess
-    kb.press(Key.tab)
-    time.sleep(0.1)
-    if checar_parada():
-        return
+    repeticao(7)
+    
+   
     if check_var.get() is True:
         kb.press(key="s")  # MOTIVO ACionamento sem passagem
         time.sleep(0.1)
@@ -343,32 +257,12 @@ def analise():
         if checar_parada():
             return
         focar_janela("Tabela de Apoio ")
-        repeticao(2)
-    time.sleep(0.2)  # MOTIVO AC E RESPSOTA POSITIVA
-    focar_janela("análise ")
+        repeticao(3)
+    
     if checar_parada():
         return
-    for _ in range(1):  # PULA RESP NEGATIVA PARA STATUS ANALISE
-        kb.press(Key.tab)
-        time.sleep(0.2)
-    time.sleep(0.1)
-    if checar_parada():
-        return
-    focar_janela("Tabela de Apoio ")
-    kb.press(Key.right)
-    time.sleep(0.1)
-    kb.press(Key.up)
-    time.sleep(0.1)
-    if checar_parada():
-        return
-    repeticao(2)
-    kb.press(Key.left)
-    time.sleep(0.1)
-    kb.press(Key.up)
-    time.sleep(0.1)
-    if checar_parada():
-        return
-    repeticao(1)
+    
+    
     label_result.configure(text="---Concluído---", **verde, font=fonte3)
     janela.update()
     winsound.MessageBeep(winsound.MB_ICONHAND)  # mensagem de sucesso quando terminar
